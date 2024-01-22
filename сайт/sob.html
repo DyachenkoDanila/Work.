@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OOO "BAS-S"</title>
+
+	<!-- Bootstrap reboot (для сброса стилей) -->
+	<link rel="stylesheet" href="libs/bootstrap-reboot.min.css">
+
+	<!-- Bootstrap сетка -->
+	<link rel="stylesheet" href="libs/bootstrap-grid.min.css">
+
+	<!-- Шрифты с Google Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+	<!-- Стили сайта -->
+	<link rel="stylesheet" href="css/styles.css">
+    <style>
+          body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .bold-heading {
+            font-size: 26px;
+            font-weight: bold;
+            padding: 50px;
+        }
+
+        .paragraphs {
+            margin-left: 20px; /* Отступ слева для тире */
+            font-size: 26px; /* Размер шрифта для пунктов */
+            padding: 30px;
+        }
+        .foto {
+            position: relative;
+        }
+
+        .overlay-text {
+            position: absolute;
+            top: 20px;
+            left:500px; /* Добавьте отступ слева, если необходимо */
+            color: #fff; /* Добавьте цвет текста, чтобы он был виден на изображении */
+        }
+    </style>
+</head>
+<body>
+
+	<nav class="navbar">
+		<div class="container">
+			
+			<a href="index.html" class="logo">
+				<img src="img/2.png" alt="Логотип СПАРК">
+				<p class="spark">СПАРК</p>
+			</a>
+
+			<div class="navbar-wrap">
+				<ul class="navbar-menu">
+					<li><a href="voz.html">Возможности</a></li>
+					<li><a href="integr.html">Интеграция</a></li>
+					<li><a href="sys.html">О системе</a></li>
+					<li><a href="stat.html">Статистика</a></li>
+				</ul>
+	
+				<a href="pod.html" class="callback">Подержка</a>
+			</div>
+		</div>
+	</nav>
+	
+	<div class="foto">
+		
+		<div class="overlay-text">
+			<p><h2><strong>Комплексная оценка рисков по финансовым взаимоотношениям с контрагентами. Новая версия сервиса «Портфель» в СПАРК</strong></h2></p>
+			
+		</div>
+		<img src="img/1.jpg" alt="Картинка с ссылочными выражениями">
+	</div>
+	<div class="column">
+        <p class="bold-heading">ОСНОВНЫЕ ТЕМЫ:</p>
+        <div class="paragraphs">
+            <p>- Создание портфеля дебиторской задолженности или других активов в СПАРК</p>
+            <p>- Анализ качества портфеля, выявление кредитных и иных рисков</p>
+            <p>- Контрагенты и суммы задолженности</p>
+            <p>- Причины неоплат и приоритеты для работы по возврату</p>
+            <p>- Оценка потенциала развития сотрудничества с конкретными контрагентами</p>
+            <p>- Дополнительный функционал по работе с дебиторской задолженностью для участников программы "Мониторинг платежей"</p>
+            <p>Зарегистрироваться на вебинар можно в системе СПАРК, на главной странице в разделе «Обучение». </p>
+        </div>
+    </div>
+	<footer>
+		<nav>
+			<a href="ist.html">Источники данных</a>
+			<a href="sob.html">События</a>
+			<a href="poisk.html">Поиск компаний</a>
+			<a href="ogr.html">Ограничения использования</a>
+			<a href="cont.html">Контактные данные</a>
+		</nav>
+		<div class="logo">
+			<a href="#"><img src="" alt=""></a>
+		</div>
+	</footer>
+	<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuLinks = document.querySelectorAll('.men a');
+            
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const targetElementId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetElementId);
+                    
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+    </script>
+	
+</body>
+</html>

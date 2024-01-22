@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OOO "BAS-S"</title>
+
+	<!-- Bootstrap reboot (для сброса стилей) -->
+	<link rel="stylesheet" href="libs/bootstrap-reboot.min.css">
+
+	<!-- Bootstrap сетка -->
+	<link rel="stylesheet" href="libs/bootstrap-grid.min.css">
+
+	<!-- Шрифты с Google Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+	<!-- Стили сайта -->
+	<link rel="stylesheet" href="css/styles.css">
+    <style>
+        
+    .navbar {
+        position: fixed;
+        width: 100%;
+        background-color: rgb(255, 255, 255); /* Добавьте фон с прозрачностью */
+        z-index: 1000; /* Установите z-index больше, чем у других элементов на странице */
+    }
+
+    .foto {
+        position: relative; /* Добавьте position: relative для блока .foto */
+        height: 500px; /* Установите высоту, чтобы избежать перекрытия содержимого */
+    }
+
+    .overlay-text {
+        position: absolute;
+        top: 50%; /* Разместите текст посередине блока .foto */
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .apper {
+        display: flex;
+        flex-direction: row;
+        padding: 50px;
+        margin-top: 10px; /* Добавьте отступ сверху для контента под фиксированным хедером */
+    }
+
+    .q,
+    .w {
+        margin-right: 60px;
+    }
+
+    .navbar-menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .navbar-menu li {
+        margin-right: 20px;
+    }
+
+    .callback {
+        margin-left: auto; /* Разместите ссылку "Поддержка" справа внутри flex-контейнера */
+    }
+</style>
+
+
+    </style>
+</head>
+<body>
+
+	<nav class="navbar">
+		<div class="container">
+			
+			<a href="index.html" class="logo">
+				<img src="img/2.png" alt="Логотип СПАРК">
+				<p class="spark">СПАРК</p>
+			</a>
+
+			<div class="navbar-wrap">
+				<ul class="navbar-menu">
+					<li><a href="voz.html">Возможности</a></li>
+					<li><a href="integr.html">Интеграция</a></li>
+					<li><a href="sys.html">О системе</a></li>
+					<li><a href="stat.html">Статистика</a></li>
+				</ul>
+	
+				<a href="pod.html" class="callback">Подержка</a>
+			</div>
+		</div>
+	</nav>
+	
+	<div class="foto">
+
+		<div class="overlay-text">
+			<p><h2><strong>Источники</strong></h2></p>
+			
+		</div>
+		<img src="img/1.jpg" alt="Картинка с ссылочными выражениями">
+	</div>
+	<div class="apper">
+        <div class="q">
+            <p><strong>В России</strong></p><br>
+            <p>ООО "ИКАР ПЛЮС"
+                ИНН 6319706673</p><br>
+            <p>ООО "СИБПРОМСНАБ"
+                2221191815</p><br>
+            <p>ООО "ДУЭТ"
+                2503024570</p><br>
+            <p>ООО "НЕО-ДЕКОР-СТРОЙ"
+                2907016743</p><br>
+            <p>ООО "СТРОЙОПТТОГР"
+                2983013590</p><br>
+            <p>ООО "ФОМТИМ"
+                3257040970</p><br>
+        </div>
+        <div class="w">
+            <p><strong>В регионе</strong></p><br>
+            <p>ООО "СТАВКОМВИДЕО+"
+                ИНН 2635107695</p><br>
+            <p>ООО "ЛИДЕР"
+                2635828376</p><br>
+            <p>МУП "КУРСКИЙ РАЙОННЫЙ РЫНОК"
+                2612017124</p><br>
+            <p>ООО "МЭД ДОГ"
+                2635247935</p><br>
+            <p>ООО "С' ИР' ИУС"
+                2635041162</p><br>
+            <p>ООО "ЕССЕНТУКСКОЕ-КООП"
+                2618019657</p><br>
+        </div>
+        <div class="w">
+            <p><strong>В отрасли</strong></p><br>
+            <p>МП "ЦРА" УКМО
+                ИНН 3818028918</p><br>
+            <p>ООО "ГАРНЕТ"
+                3025039735</p><br>
+            <p>ООО "ПАССИФЛОРА"
+                7736311992</p><br>
+            <p>ООО "ДУЭТ"
+                2503024570</p><br>
+            <p>ООО "СИБПРОМСНАБ"
+                2221191815</p><br>
+            <p>ООО "ФЕНИКС"
+                2015008849</p><br>
+        </div>
+    </div>
+	<footer>
+		<nav>
+			<a href="ist.html">Источники данных</a>
+			<a href="sob.html">События</a>
+			<a href="poisk.html">Поиск компаний</a>
+			<a href="ogr.html">Ограничения использования</a>
+			<a href="cont.html">Контактные данные</a>
+		</nav>
+		<div class="logo">
+			<a href="#"><img src="" alt=""></a>
+		</div>
+	</footer>
+	<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuLinks = document.querySelectorAll('.men a');
+            
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const targetElementId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetElementId);
+                    
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+    </script>
+	
+</body>
+</html>
